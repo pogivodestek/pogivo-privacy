@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POGIVO — Gizlilik Politikası</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #0a0a0f;
+            color: #e0e0e6;
+            line-height: 1.7;
+            padding: 0;
+        }
+        .hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            padding: 60px 20px 40px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        .hero h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+        .hero .subtitle {
+            font-size: 1.1rem;
+            color: #a0a0b0;
+        }
+        .hero .date {
+            margin-top: 16px;
+            font-size: 0.85rem;
+            color: #808090;
+            font-style: italic;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+        }
+        .nav-tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+        }
+        .nav-tab {
+            padding: 10px 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.04);
+            color: #a0a0b0;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        .nav-tab:hover { background: rgba(255,255,255,0.08); color: #fff; }
+        .nav-tab.active {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            color: #fff;
+            border-color: transparent;
+        }
+        .section-content { display: none; }
+        .section-content.active { display: block; }
+        .section {
+            margin-bottom: 28px;
+            padding: 20px 24px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+        .section h2 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #c4b5fd;
+            margin-bottom: 10px;
+        }
+        .section p, .section ul {
+            font-size: 0.95rem;
+            color: #b0b0c0;
+        }
+        .section ul {
+            padding-left: 20px;
+            margin-top: 6px;
+        }
+        .section ul li { margin-bottom: 4px; }
+        .info-box {
+            margin: 24px 0;
+            padding: 16px 20px;
+            background: rgba(99, 102, 241, 0.08);
+            border-left: 3px solid #6366f1;
+            border-radius: 8px;
+        }
+        .info-box p { color: #c4b5fd; font-size: 0.9rem; }
+        .contact-card {
+            margin-top: 32px;
+            padding: 24px;
+            background: linear-gradient(135deg, rgba(99,102,241,0.1), rgba(139,92,246,0.08));
+            border-radius: 16px;
+            border: 1px solid rgba(99,102,241,0.2);
+            text-align: center;
+        }
+        .contact-card h3 { color: #c4b5fd; font-size: 1.1rem; margin-bottom: 12px; }
+        .contact-card a {
+            color: #818cf8;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .contact-card a:hover { text-decoration: underline; }
+        .footer {
+            text-align: center;
+            padding: 32px 20px;
+            color: #606070;
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            margin-top: 40px;
+        }
+        @media (max-width: 600px) {
+            .hero { padding: 40px 16px 28px; }
+            .hero h1 { font-size: 1.5rem; }
+            .container { padding: 24px 16px 60px; }
+            .section { padding: 16px 18px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <h1>🛡️ POGIVO</h1>
+    <p class="subtitle">Gizlilik Politikası, Kullanım Koşulları & KVKK Aydınlatma Metni</p>
+    <p class="date">Son güncelleme: 19 Şubat 2026 · Yürürlük tarihi: 19 Şubat 2026</p>
+</div>
+
+<div class="container">
+
+    <div class="nav-tabs">
+        <div class="nav-tab active" onclick="showTab('privacy')">Gizlilik Politikası</div>
+        <div class="nav-tab" onclick="showTab('kvkk')">KVKK Aydınlatma</div>
+        <div class="nav-tab" onclick="showTab('terms')">Kullanım Koşulları</div>
+    </div>
+
+    <!-- ==================== GİZLİLİK POLİTİKASI ==================== -->
+    <div id="privacy" class="section-content active">
+
+        <div class="section">
+            <h2>1. Veri Sorumlusu</h2>
+            <p>İşbu Gizlilik Politikası, 6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") ve ilgili mevzuat kapsamında, POGIVO ("Uygulama") tarafından kişisel verilerinizin işlenmesine ilişkin usul ve esasları belirlemektedir.</p>
+            <div class="info-box">
+                <p><strong>Veri Sorumluları:</strong> Mustafa Çolakoğlu ve Kaan Cansızoğlu (Bireysel Geliştiriciler)<br>
+                <strong>Konum:</strong> Bayburt, Türkiye<br>
+                <strong>İletişim:</strong> pogivodestek@gmail.com</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>2. İşlenen Kişisel Veriler</h2>
+            <p>Aşağıdaki kategorilerdeki kişisel verileriniz işlenmektedir:</p>
+            <ul>
+                <li><strong>Kimlik Bilgileri:</strong> Ad soyad, kullanıcı adı, doğum tarihi, cinsiyet, profil fotoğrafı</li>
+                <li><strong>İletişim Bilgileri:</strong> E-posta adresi</li>
+                <li><strong>Hesap Bilgileri:</strong> Şifrelenmiş parola, Apple/Google bağlantı bilgileri, hesap oluşturma tarihi</li>
+                <li><strong>Konum Verileri:</strong> Coğrafi konum (yalnızca izniniz dahilinde)</li>
+                <li><strong>Cihaz Bilgileri:</strong> Cihaz türü, işletim sistemi, uygulama sürümü, bildirim token'ları</li>
+                <li><strong>Kullanım Verileri:</strong> Uygulama içi etkileşimler, erişim zamanları, arama geçmişi</li>
+                <li><strong>Kullanıcı İçeriği:</strong> Gönderiler, yorumlar, etkinlik bilgileri, mesajlar, fotoğraflar</li>
+                <li><strong>Ödeme Bilgileri:</strong> Premium üyelik durumu (ödeme detayları Apple/Google tarafından işlenir, tarafımızca saklanmaz)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>3. İşlenme Amaçları</h2>
+            <ul>
+                <li>Hesap oluşturma, doğrulama ve yönetimi</li>
+                <li>Uygulamanın temel işlevlerinin sağlanması</li>
+                <li>Konum tabanlı etkinlik keşfi ve mesafe hesaplaması</li>
+                <li>Push bildirim gönderimi</li>
+                <li>Kullanıcı deneyiminin iyileştirilmesi</li>
+                <li>Güvenlik önlemlerinin uygulanması</li>
+                <li>Yasal yükümlülüklerin yerine getirilmesi</li>
+                <li>Premium üyelik yönetimi</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>4. Hukuki Sebepler (KVKK Md. 5-6)</h2>
+            <ul>
+                <li><strong>Açık rızanız:</strong> Konum verileri, bildirim izinleri</li>
+                <li><strong>Sözleşmenin ifası:</strong> Hesap oluşturma, hizmet sunumu</li>
+                <li><strong>Meşru menfaat:</strong> Uygulama güvenliği, sistem iyileştirme</li>
+                <li><strong>Hukuki yükümlülük:</strong> Yasal bilgi talepleri</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>5. Verilerin Saklanma Süresi</h2>
+            <ul>
+                <li><strong>Hesap bilgileri:</strong> Hesap aktif olduğu sürece + silmeden itibaren 30 gün</li>
+                <li><strong>Kullanıcı içeriği:</strong> İçerik silinene veya hesap kapatılana kadar</li>
+                <li><strong>Konum verileri:</strong> Oturum süresince geçici; kalıcı saklanmaz</li>
+                <li><strong>Kullanım verileri:</strong> Anonim hale getirilerek 2 yıl</li>
+                <li><strong>Onay kayıtları:</strong> 10 yıl (yasal zorunluluk)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>6. Verilerin Aktarımı</h2>
+            <p>Kişisel verilerinizi üçüncü taraflara satmayız veya pazarlama amacıyla paylaşmayız.</p>
+            <p style="margin-top: 8px;"><strong>Paylaşılan taraflar:</strong></p>
+            <ul>
+                <li><strong>Google Firebase:</strong> Altyapı sağlayıcı</li>
+                <li><strong>Apple Inc. / Google LLC:</strong> Sosyal giriş hizmetleri</li>
+                <li><strong>Yasal makamlar:</strong> Yasal zorunluluk halinde</li>
+            </ul>
+            <p style="margin-top: 8px;">Firebase altyapısı nedeniyle verileriniz yurt dışına aktarılabilir (KVKK Md. 9 kapsamında gerekli tedbirler alınarak).</p>
+        </div>
+
+        <div class="section">
+            <h2>7. Veri Güvenliği</h2>
+            <ul>
+                <li>SSL/TLS şifrelemesi ile veri iletimi</li>
+                <li>Şifrelerin kriptografik yöntemlerle saklanması</li>
+                <li>Firebase güvenlik kuralları ile erişim kontrolü</li>
+                <li>Minimum yetki prensibi</li>
+                <li>Otomatik oturum yönetimi ve yetkisiz erişim tespiti</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>8. Konum Verileri</h2>
+            <p>Konum verileriniz yalnızca açık izniniz dahilinde toplanır. Sürekli konum takibi yapılmaz. Konum geçmişi kalıcı olarak saklanmaz. İzni cihaz ayarlarından iptal edebilirsiniz.</p>
+        </div>
+
+        <div class="section">
+            <h2>9. Sosyal Giriş (Apple/Google)</h2>
+            <p>Apple veya Google ile giriş yapmanız halinde yalnızca adınız ve e-posta adresiniz alınır. Sosyal giriş şifreleriniz tarafımızca saklanmaz.</p>
+        </div>
+
+        <div class="section">
+            <h2>10. Bildirimler</h2>
+            <p>Push bildirimleri yalnızca izniniz dahilinde gönderilir. Bildirim izni cihaz ayarlarından yönetilebilir.</p>
+        </div>
+
+        <div class="section">
+            <h2>11. Çerezler</h2>
+            <p>POGIVO bir mobil uygulamadır ve çerez (cookie) kullanmamaktadır.</p>
+        </div>
+
+        <div class="section">
+            <h2>12. Çocukların Gizliliği</h2>
+            <p>POGIVO 18 yaşın altındaki bireylere yönelik bir hizmet sunmamaktadır. 13 yaşın altındaki çocuklardan bilerek kişisel veri toplamayız. Tespit halinde veriler derhal silinir.</p>
+        </div>
+
+        <div class="section">
+            <h2>13. Veri İhlali Bildirimi</h2>
+            <p>Kişisel veri ihlali tespit edilmesi halinde Kişisel Verileri Koruma Kurulu'na 72 saat içinde bildirim yapılır ve ilgili kişilere en kısa sürede bilgi verilir.</p>
+        </div>
+
+        <div class="section">
+            <h2>14. Değişiklikler</h2>
+            <p>İşbu Gizlilik Politikası zaman zaman güncellenebilir. Önemli değişiklikler uygulama içi bildirim yoluyla duyurulur.</p>
+        </div>
+
+        <div class="section">
+            <h2>15. Hesap Silme</h2>
+            <p>Hesabınızı uygulama içindeki Ayarlar > Gizlilik Politikası > "Hesabımı Sil" butonu ile silebilirsiniz. Silme işlemi 30 gün içinde tamamlanır. Onay kayıtları yasal zorunluluk gereği anonimleştirilerek saklanır.</p>
+        </div>
+
+        <div class="contact-card">
+            <h3>📧 İletişim</h3>
+            <p>Sorularınız için: <a href="mailto:pogivodestek@gmail.com">pogivodestek@gmail.com</a></p>
+            <p style="margin-top: 8px; font-size: 0.85rem; color: #808090;">KVKK başvuruları için: <a href="https://www.kvkk.gov.tr" target="_blank">www.kvkk.gov.tr</a></p>
+        </div>
+    </div>
+
+    <!-- ==================== KVKK AYDINLATMA METNİ ==================== -->
+    <div id="kvkk" class="section-content">
+
+        <div class="section">
+            <h2>1. Veri Sorumlusu</h2>
+            <div class="info-box">
+                <p><strong>Veri Sorumluları:</strong> Mustafa Çolakoğlu ve Kaan Cansızoğlu (Bireysel Geliştiriciler)<br>
+                <strong>Konum:</strong> Bayburt, Türkiye<br>
+                <strong>İletişim:</strong> pogivodestek@gmail.com</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>2. İşlenen Kişisel Veriler</h2>
+            <ul>
+                <li><strong>Kimlik Bilgileri:</strong> Ad soyad, kullanıcı adı, doğum tarihi, cinsiyet, profil fotoğrafı</li>
+                <li><strong>İletişim Bilgileri:</strong> E-posta adresi</li>
+                <li><strong>Konum Verileri:</strong> Coğrafi konum (yalnızca izniniz dahilinde)</li>
+                <li><strong>Cihaz Bilgileri:</strong> Cihaz türü, işletim sistemi, uygulama sürümü</li>
+                <li><strong>Kullanım Verileri:</strong> Uygulama içi etkileşimler, erişim zamanları</li>
+                <li><strong>Kullanıcı İçeriği:</strong> Gönderiler, yorumlar, etkinlik bilgileri, mesajlar, fotoğraflar</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>3. İşlenme Amaçları</h2>
+            <ul>
+                <li>Hesap oluşturma, doğrulama ve yönetimi</li>
+                <li>Uygulamanın temel işlevlerinin sağlanması</li>
+                <li>Konum tabanlı etkinlik keşfi</li>
+                <li>Push bildirim gönderimi</li>
+                <li>Güvenlik önlemlerinin uygulanması</li>
+                <li>Yasal yükümlülüklerin yerine getirilmesi</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>4. Hukuki Sebepler (KVKK Md. 5-6)</h2>
+            <ul>
+                <li><strong>Açık rızanız:</strong> Konum verileri, bildirim izinleri</li>
+                <li><strong>Sözleşmenin ifası:</strong> Hesap oluşturma, hizmet sunumu</li>
+                <li><strong>Meşru menfaat:</strong> Uygulama güvenliği</li>
+                <li><strong>Hukuki yükümlülük:</strong> Yasal bilgi talepleri</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>5. Verilerin Saklanma Süresi</h2>
+            <ul>
+                <li><strong>Hesap bilgileri:</strong> Hesap aktif olduğu sürece + silme tarihinden itibaren 30 gün</li>
+                <li><strong>Konum verileri:</strong> Oturum süresince geçici olarak işlenir</li>
+                <li><strong>Kullanım verileri:</strong> Anonim hale getirilerek 2 yıl</li>
+                <li><strong>Onay kayıtları:</strong> 10 yıl (yasal zorunluluk)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>6. Verilerin Aktarımı</h2>
+            <p>Kişisel verilerinizi üçüncü taraflara satmayız. Firebase altyapısı nedeniyle verileriniz yurt dışına aktarılabilir (KVKK Md. 9 kapsamında gerekli tedbirler alınarak).</p>
+        </div>
+
+        <div class="section">
+            <h2>7. Haklarınız (KVKK Md. 11)</h2>
+            <p>6698 sayılı Kanun'un 11. maddesi kapsamında aşağıdaki haklara sahipsiniz:</p>
+            <ul>
+                <li>a) Kişisel verilerinizin işlenip işlenmediğini öğrenme</li>
+                <li>b) İşlenmişse buna ilişkin bilgi talep etme</li>
+                <li>c) İşlenme amacını ve bunların amacına uygun kullanılıp kullanılmadığını öğrenme</li>
+                <li>d) Yurt içinde veya yurt dışında kişisel verilerin aktarıldığı üçüncü kişileri bilme</li>
+                <li>e) Kişisel verilerin eksik veya yanlış işlenmiş olması hâlinde bunların düzeltilmesini isteme</li>
+                <li>f) Kişisel verilerin silinmesini veya yok edilmesini isteme</li>
+                <li>g) Düzeltme ve silme işlemlerinin, kişisel verilerin aktarıldığı üçüncü kişilere bildirilmesini isteme</li>
+                <li>h) İşlenen verilerin münhasıran otomatik sistemler vasıtasıyla analiz edilmesi suretiyle kişinin kendisi aleyhine bir sonucun ortaya çıkmasına itiraz etme</li>
+                <li>ı) Kişisel verilerin kanuna aykırı olarak işlenmesi sebebiyle zarara uğraması hâlinde zararın giderilmesini talep etme</li>
+            </ul>
+            <p style="margin-top: 12px;">Başvuru: <a href="mailto:pogivodestek@gmail.com" style="color: #818cf8;">pogivodestek@gmail.com</a> (30 gün içinde ücretsiz sonuçlandırılır)</p>
+        </div>
+
+        <div class="section">
+            <h2>8. Veri Güvenliği</h2>
+            <ul>
+                <li>SSL/TLS şifreleme</li>
+                <li>Firebase Authentication güvenlik kuralları</li>
+                <li>Firestore güvenlik kuralları</li>
+                <li>Şifrelerin hash'lenerek saklanması</li>
+                <li>Düzenli güvenlik değerlendirmesi</li>
+            </ul>
+        </div>
+
+        <div class="contact-card">
+            <h3>📧 İletişim ve Başvuru</h3>
+            <p>E-posta: <a href="mailto:pogivodestek@gmail.com">pogivodestek@gmail.com</a></p>
+            <p style="margin-top: 8px; font-size: 0.85rem; color: #808090;">KVKK Kurumu: <a href="https://www.kvkk.gov.tr" target="_blank">www.kvkk.gov.tr</a></p>
+        </div>
+    </div>
+
+    <!-- ==================== KULLANIM KOŞULLARI ==================== -->
+    <div id="terms" class="section-content">
+
+        <div class="section">
+            <h2>1. Taraflar ve Kapsam</h2>
+            <p>İşbu Kullanım Koşulları ("Sözleşme"), POGIVO mobil uygulamasını ("Uygulama") geliştiren ve işleten Mustafa Çolakoğlu ve Kaan Cansızoğlu (Bireysel Geliştiriciler, Bayburt/Türkiye) ("Geliştiriciler", "biz", "bizim") ile Uygulamayı kullanan gerçek kişi ("Kullanıcı", "siz", "sizin") arasında akdedilmiştir.</p>
+            <p style="margin-top: 8px;">Uygulamayı indirerek, yükleyerek, hesap oluşturarak veya herhangi bir şekilde kullanarak işbu Sözleşme'nin tüm hükümlerini okuduğunuzu, anladığınızı ve kabul ettiğinizi beyan ve taahhüt edersiniz.</p>
+        </div>
+
+        <div class="section">
+            <h2>2. Hizmet Tanımı</h2>
+            <p>POGIVO, kullanıcıların sosyal etkinlikler oluşturmasına, keşfetmesine, katılmasına ve diğer kullanıcılarla etkileşime geçmesine olanak tanıyan bir sosyal etkinlik platformudur. Uygulama; etkinlik oluşturma ve yönetimi, sosyal paylaşım (gönderi, yorum, beğeni), kullanıcı profili oluşturma, konum tabanlı etkinlik keşfi, anlık mesajlaşma, bildirim sistemi ve premium üyelik hizmetlerini kapsamaktadır.</p>
+        </div>
+
+        <div class="section">
+            <h2>3. Kullanım Şartları ve Ehliyet</h2>
+            <p>Uygulamayı kullanmak için en az 18 yaşında olmanız gerekmektedir. 18 yaşından küçükseniz yasal vasinizin/ebeveyninizin onayı ile kullanabilirsiniz. Daha önce POGIVO tarafından hesabı askıya alınmış kişiler yeni hesap açamazlar.</p>
+        </div>
+
+        <div class="section">
+            <h2>4. Hesap Oluşturma ve Güvenlik</h2>
+            <ul>
+                <li>Kayıt sırasında doğru, güncel ve eksiksiz bilgi sağlamakla yükümlüsünüz.</li>
+                <li>Hesap bilgilerinizin gizliliğinden ve güvenliğinden tamamen siz sorumlusunuz.</li>
+                <li>Hesabınız üzerinden gerçekleştirilen tüm işlemlerden siz sorumlusunuz.</li>
+                <li>Hesabınızı başka kişilere devredemez, satamaz veya kiralayamazsınız.</li>
+                <li>Her kullanıcı yalnızca bir hesap oluşturabilir.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>5. Kullanıcı İçeriği ve Lisanslama</h2>
+            <ul>
+                <li>Uygulamaya yüklediğiniz tüm içerikler üzerindeki fikri mülkiyet haklarınız size ait olmaya devam eder.</li>
+                <li>İçerik paylaşarak POGIVO'ya kullanım, dağıtma ve türev eser oluşturma lisansı vermektesiniz.</li>
+                <li>Paylaştığınız tüm içeriklerin yasal haklarına sahip olduğunuzu beyan edersiniz.</li>
+                <li>POGIVO, herhangi bir Kullanıcı İçeriğini önceden haber vermeksizin kaldırma hakkını saklı tutar.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>6. Yasaklanan Davranışlar</h2>
+            <ul>
+                <li>Yasalara aykırı, hakaret içeren, tehdit edici içerik paylaşmak</li>
+                <li>Nefret söylemi, ayrımcılık, ırkçılık veya şiddet içeren ifadeler</li>
+                <li>Pornografik veya müstehcen materyal yayınlamak</li>
+                <li>Başkalarının bilgilerini rızası olmadan paylaşmak</li>
+                <li>Spam, reklam veya zararlı yazılım yaymak</li>
+                <li>Sahte hesap oluşturmak veya başkasının kimliğine bürünmek</li>
+                <li>Tersine mühendislik veya otomatik araçlar kullanmak</li>
+                <li>Diğer kullanıcıları taciz etmek veya rahatsız etmek</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>7. Etkinlik Kuralları</h2>
+            <p>Organizatörler etkinlik bilgilerinin doğruluğundan sorumludur. POGIVO kullanıcılar arası etkinliklerin organizasyonundan, güvenliğinden veya sonuçlarından sorumlu değildir. POGIVO yalnızca platform sağlayıcıdır.</p>
+        </div>
+
+        <div class="section">
+            <h2>8. Premium Üyelik</h2>
+            <ul>
+                <li>Abonelikler iptal edilmedikçe otomatik yenilenir.</li>
+                <li>İptal mevcut dönem sonunda geçerli olur; kalan süre için iade yapılmaz.</li>
+                <li>Ödeme işlemleri Apple App Store veya Google Play Store üzerinden gerçekleştirilir.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>9. Fikri Mülkiyet</h2>
+            <p>POGIVO markası, logosu, tasarımı ve kaynak kodu telif hakkı ile korunmaktadır. Kopyalama, tersine mühendislik veya türev eser oluşturma yasaktır.</p>
+        </div>
+
+        <div class="section">
+            <h2>10. Garanti Reddi</h2>
+            <p>UYGULAMA "OLDUĞU GİBİ" SUNULMAKTADIR. POGIVO HİÇBİR GARANTİ VERMEZ. Hizmetin kesintisiz veya hatasız olacağı garanti edilmez.</p>
+        </div>
+
+        <div class="section">
+            <h2>11. Sorumluluk Sınırlandırması</h2>
+            <p>POGIVO hiçbir koşulda doğrudan, dolaylı, arızi veya sonuçsal zararlardan sorumlu tutulamaz. Toplam sorumluluk son 12 ayda ödenen tutarı aşamaz.</p>
+        </div>
+
+        <div class="section">
+            <h2>12. Hesap Sonlandırma</h2>
+            <p>POGIVO hesabınızı askıya alma veya sonlandırma hakkını saklı tutar. Hesap silindiğinde verileriniz 30 gün içinde kalıcı olarak silinir.</p>
+        </div>
+
+        <div class="section">
+            <h2>13. Uygulanacak Hukuk</h2>
+            <p>İşbu Sözleşme Türkiye Cumhuriyeti yasalarına tabidir. Uyuşmazlıklarda İstanbul Mahkemeleri ve İcra Daireleri yetkilidir.</p>
+        </div>
+
+        <div class="section">
+            <h2>14. Değişiklikler</h2>
+            <p>Kullanım Koşulları herhangi bir zamanda değiştirilebilir. Önemli değişiklikler uygulama içi bildirim ile duyurulur. Uygulamayı kullanmaya devam etmeniz güncellenmiş koşulları kabul ettiğiniz anlamına gelir.</p>
+        </div>
+
+        <div class="contact-card">
+            <h3>📧 İletişim</h3>
+            <p>E-posta: <a href="mailto:pogivodestek@gmail.com">pogivodestek@gmail.com</a></p>
+        </div>
+    </div>
+
+    <div class="footer">
+        © 2026 POGIVO. Tüm hakları saklıdır.
+    </div>
+</div>
+
+<script>
+    function showTab(tabId) {
+        document.querySelectorAll('.section-content').forEach(el => el.classList.remove('active'));
+        document.querySelectorAll('.nav-tab').forEach(el => el.classList.remove('active'));
+        document.getElementById(tabId).classList.add('active');
+        event.target.classList.add('active');
+        window.scrollTo({ top: 200, behavior: 'smooth' });
+    }
+</script>
+
+</body>
+</html>
